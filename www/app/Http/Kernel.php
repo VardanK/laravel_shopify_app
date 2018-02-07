@@ -57,5 +57,9 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'auth.shop' => \OhMyBrew\ShopifyApp\Middleware\AuthShop::class,
+        'auth.webhook' => \OhMyBrew\ShopifyApp\Middleware\AuthWebhook::class,
+        'auth.proxy' => \OhMyBrew\ShopifyApp\Middleware\AuthProxy::class,
+        'billable' => \OhMyBrew\ShopifyApp\Middleware\Billable::class,
     ];
 }

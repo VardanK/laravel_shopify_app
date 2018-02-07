@@ -18,7 +18,7 @@ services:
     volumes:
       - ./www/:/var/www
     ports:
-      - 8081:80
+      - 8090:80
 
   database:
     image: mysql:5.6

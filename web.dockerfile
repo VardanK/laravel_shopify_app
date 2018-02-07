@@ -1,5 +1,3 @@
-FROM php:7.2.1-fpm
+FROM nginx:1.10
 
-RUN apt-get update && apt-get install -y \
-    mysql-client --no-install-recommends \
-    && docker-php-ext-install pdo_mysql
+ADD vhost.conf /etc/nginx/conf.d/default.conf
